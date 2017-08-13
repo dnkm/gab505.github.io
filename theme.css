@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Chewy");
+
+.loading {
+    background: url('https://loading.io/spinners/globe/index.globe-earth-spinner.gif') no-repeat top center;
+}
+
+.container {
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+.loaded .container {
+    opacity: 1;
+}
+
+#schoolLogo {
+    width: 200;
+    height: 200;
+}
+
+#test{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#test .glyphicon {
+    font-size: 100px;
+}
+
+#testImg{
+    transform: rotate(0deg);
+    transition-duration: 3s;
+}
+
+#testImg.rotated{
+    transform: rotate(360deg);
+    transition-duration: 3s;
+}
+
+.jumbotron{
+    height: 700px;
+}
+
+#galleryContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#galleryContainer > div {
+    border: 1px solid black;
+    flex-shrink: 0;
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Chewy', cursive;
+    font-size: 1em;
+    opacity: 0.4;
+    
+}
+
+.box.on {
+    overflow: hidden;
+    animation-name: highlight;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    
+}
+
+@keyframes highlight{
+    from {
+        opacity: 0.4
+    }
+    50% {
+        opacity: 1;
+        font-size: 3em;
+    }
+    to{
+        opacity: 1
+    }
+}
+
+#demoCanvas{
+    border : 1px solid grey;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    display: block;
+    width: 800px;
+}
