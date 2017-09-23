@@ -1,0 +1,110 @@
+/* Styles go here */
+:root {
+  --color1: #002626;
+  --color2: #0e4749;
+  --color3: #95c623;
+  --color4: #e55812;
+  --color5: #efe7da;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--color5);
+}
+h1,
+h2,
+h3 {
+  font-family: 'Gentium Basic', serif;
+}
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+aside.left {
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+aside.left > * {
+  text-align: center;
+  margin-bottom: 5px;
+}
+aside.left .logo {
+  display: grid;
+  grid-template-columns: 30px 30px;
+  grid-template-rows: 30px 30px;
+  align-content: center;
+  margin-bottom: 30px;
+  transition: all 1s;
+}
+aside.left .logo div {
+  line-height: 30px;
+  transition: all 1s;
+}
+aside.left .logo .black {
+  background: #000;
+  color: #fff;
+}
+aside.left .logo .white {
+  background: #fff;
+  color: #000;
+}
+aside.left .logo:hover {
+  transform: scale(1.2);
+}
+aside.left .logo:hover .black {
+  background: #fff;
+  color: #000;
+}
+aside.left .logo:hover .white {
+  background: #000;
+  color: #fff;
+}
+.category {
+  margin-left: 200px;
+  height: 50px;
+}
+main {
+  margin-left: 200px;
+  min-height: 1000px;
+}
+main .home {
+  column-gap: 0px;
+  column-count: 3;
+}
+main .home .box {
+  position: relative;
+  overflow: hidden;
+}
+main .home .box .cover {
+  position: absolute;
+  background: #fff;
+  opacity: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 5s;
+}
+main .home .box:hover .cover {
+  display: block;
+  opacity: 0.7;
+}
+main .home .box:hover .title {
+  display: block;
+}
+main .home .box .title {
+  position: absolute;
+  display: none;
+  bottom: 5px;
+  left: 5px;
+  color: #fff;
+  text-shadow: 1.5px 1.5px 0px #000;
+}

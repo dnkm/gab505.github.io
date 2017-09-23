@@ -1,66 +1,55 @@
-/* progress bar*/
-window.onload = function(){
-    let sectionSkillset = document.querySelector("#section_skillSet")
-    let wp = new Waypoint2(sectionSkillset, 50, onHit);
-}
+const myprojects = [
+  {
+    img: "http://lorempixel.com/output/fashion-q-c-400-300-7.jpg",
+    title: 'Wall'
+  },
+  {
+    img: "http://lorempixel.com/output/fashion-q-c-300-200-7.jpg",
+    title: 'K'
+  },
+  {
+    img: "http://lorempixel.com/output/fashion-q-c-350-300-7.jpg",
+    title: 'Wal'
+  },
+  {
+    img: "http://lorempixel.com/output/fashion-q-c-300-280-7.jpg",
+    title: 'Wawl'
+  },
+  {
+    img: "http://lorempixel.com/output/fashion-q-c-200-350-7.jpg",
+    title: '2all'
+  },
+  {
+    img: "http://lorempixel.com/output/fashion-q-c-360-250-7.jpg",
+    title: 'Wdall'
+  },
+  {
+    img: "http://lorempixel.com/output/fashion-q-c-330-350-7.jpg",
+    title: 'Waldsl'
+  },
+  {
+    img: "http://lorempixel.com/output/fashion-q-c-390-300-7.jpg",
+    title: 'Wagdfsll'
+  },
+  {
+    img: "http://lorempixel.com/output/fashion-q-c-230-350-7.jpg",
+    title: 'Waewll'
+  }
+];
 
-function onHit(){
-    console.log("HIT");
-    let pa = document.querySelectorAll('#section_skillSet progress')
-    pa.forEach(p => {
-        animateProgress(p);
-    })
-}
+$(() => {
+  let main = $("main .home");
+  myprojects.forEach(p => {
+    let img = $("<img>").attr("src", p.img);
+    let cover = $("<div>").addClass("cover");
+    let title = $("<div>").addClass("title").html(p.title);
 
-function animateProgress(p){
-    if(p.dataset.originalValue > p.value){
-        p.value++;
-        requestAnimationFrame(() => {animateProgress(p)});
-    }
-}
-
-addEventListener('load', () => {
-    document.querySelector(".jumbotron").style.height = (window.innerHeight - 72) + 'px';
-    document.body.classList.remove("loading");
-    document.body.classList.add("loaded");
-
-
-    let $testImg = document.getElementById('testImg');
-
-    var waypoint = new Waypoint({
-        element: $testImg,
-        handler: function (direction) {
-            if (direction === 'down') {
-                console.log('triggered');
-                $testImg.classList.add('rotated');
-            }
-        },
-        offset: window.innerHeight - 100
-    })
-
-    var waypoint = new Waypoint({
-        element: $testImg,
-        handler: function (direction) {
-            if (direction === 'up') {
-                console.log('triggered');
-                $testImg.classList.remove('rotated');
-            }
-        },
-        offset: window.innerHeight - 250
-    })
-
-    
-
-});
-
-function scroll(){
-    let dist = 0;
-    let scrollDown = setInterval(function(){
-         window.scrollBy(0, 2);
-         dist+=2;
-            if(dist == window.innerHeight){
-            clearInterval(scrollDown);
-        }
-    }, 2);  
-}
+    $("<div>")
+      .addClass("box")
+      .append(img)
+      .append(cover)
+      .append(title)
+      .appendTo(main)
+  })
+})
 
