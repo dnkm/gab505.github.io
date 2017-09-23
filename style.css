@@ -35,6 +35,10 @@ aside.left > * {
   text-align: center;
   margin-bottom: 5px;
 }
+aside.left > a.item {
+  text-decoration: none;
+  color: #000;
+}
 aside.left .logo {
   display: grid;
   grid-template-columns: 30px 30px;
@@ -70,17 +74,19 @@ aside.left .logo:hover .white {
   margin-left: 200px;
   height: 50px;
 }
+/*@media screen and (min-width: 800px)*/
 main {
   margin-left: 200px;
   min-height: 1000px;
 }
 main .home {
   column-gap: 0px;
-  column-count: 3;
+  column-count: 5;
 }
 main .home .box {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 main .home .box .cover {
   position: absolute;
@@ -107,4 +113,158 @@ main .home .box .title {
   left: 5px;
   color: #fff;
   text-shadow: 1.5px 1.5px 0px #000;
+}
+main .dimmer {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0.5;
+  display: none;
+}
+main iframe.demoWindow {
+  position: fixed;
+  z-index: 2;
+  width: 90%;
+  height: 90%;
+  display: block;
+  top: 5%;
+  left: 5%;
+  display: none;
+}
+main iframe.demoWindow.show {
+  display: block;
+  animation: rotateToShow 2s;
+  animation-fill-mode: forwards;
+}
+@-moz-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-webkit-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-o-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-moz-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-webkit-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-o-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-moz-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-webkit-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-o-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-moz-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-webkit-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-o-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-moz-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-webkit-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@-o-keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes rotateToShow {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
 }

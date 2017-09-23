@@ -1,7 +1,8 @@
 const myprojects = [
   {
-    img: "http://lorempixel.com/output/fashion-q-c-400-300-7.jpg",
-    title: 'Wall'
+    img: "projects/bouncing_ball/screenshot.png",
+    title: 'Bouncing Ball',
+    link: "projects/bouncing_ball/index.html"
   },
   {
     img: "http://lorempixel.com/output/fashion-q-c-300-200-7.jpg",
@@ -50,6 +51,20 @@ $(() => {
       .append(cover)
       .append(title)
       .appendTo(main)
-  })
+      .on('click', function() {
+        if (p.link) {
+          $("main .dimmer")
+            .css("display", "block");
+          $("main iframe.demoWindow")
+            .attr("src", p.link)
+            .addClass("show");
+        }
+      });
+  });
+
+  $("main .dimmer").on('click', function() {
+    $(this).css("display", "none");
+    $("main iframe.demoWindow").removeClass("show");
+  });
 })
 

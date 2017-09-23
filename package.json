@@ -1,0 +1,24 @@
+{
+  "name": "gab505.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "stylus": "stylus -w *.styl -o *.css",
+    "pug": "pug -w *.pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gab505/gab505.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gab505/gab505.github.io/issues"
+  },
+  "homepage": "https://github.com/gab505/gab505.github.io#readme",
+  "devDependencies": {
+    "pug": "^2.0.0-rc.4",
+    "stylus": "^0.54.5"
+  }
+}
